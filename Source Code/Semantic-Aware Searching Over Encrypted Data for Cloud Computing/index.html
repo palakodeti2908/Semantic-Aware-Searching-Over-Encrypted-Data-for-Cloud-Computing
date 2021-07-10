@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Home Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#slideshow').cycle({
+        fx:     'fade',
+        speed:  'slow',
+        timeout: 5000,
+        pager:  '#slider_nav',
+        pagerAnchorBuilder: function(idx, slide) {
+            // return sel string for existing anchor
+            return '#slider_nav li:eq(' + (idx) + ') a';
+        }
+    });
+});
+</script>
+<style type="text/css">
+<!--
+.style2 {
+	font-size: 24px;
+	font-family: Geneva, Arial, Helvetica;
+	color: #FFFFFF;
+}
+.style4 {font-family: Geneva, Arial, Helvetica}
+.style5 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="header_resize">
+    <div class="header">
+      <div class="logo">
+        <h1 class="style2">Semantic-Aware Searching Over Encrypted Data for Cloud Computing</h1>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="U_Login.jsp">USER</a></li>
+          <li><a href="O_Login.jsp">OWNER </a></li>
+          <li><a href="T_Login.jsp">TRUSTED AUTHORITY</a></li>
+          <li><a href="C_Login.jsp">CLOUD</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="header_blog">
+    <div id="slider">
+      <!-- start slideshow -->
+      <div id="slideshow">
+        <div class="slider-item">
+          <div class="text_item">
+            <h1 class="style2">Semantic-based keyword search,</h1>
+            <p align="justify">In this paper, we propose an efficient searchable encrypted scheme based on concept hierarchy supporting semantic search with two cloud servers. A concept hierarchy tree is constructed based on domain concepts related knowledge of the outsourced dataset. We extend concept hierarchy to include more semantic relations between concepts. With the help of extended concept hierarchy, document features are extracted more precisely and search terms are well extended based on the semantic relations between concepts.</p>
+            <a href="#"><img src="images/more_information.gif" alt="" width="141" height="33" border="0" /></a></div>
+          <a href="#"><img src="images/simple_img_1.jpg" alt="" width="511" height="323" border="0" /></a></div>
+        <div class="slider-item">
+          <div class="text_item"> 
+            <h1 class="style2">Semantic similarity</h1>
+            <p align="justify">We study the problem of the semantic search based on the concept hierarchy by using two cloud servers. The concept hierarchy is extended to store various semantic relations among concepts and used to extend the search terms. To improve the efficiency and security of the search, the retrieval process is split into two independent procedures.</p>
+            <a href="#"><img src="images/more_information.gif" alt="" width="141" height="33" border="0" /></a></div><a href="#"><img src="images/simple_img_2.jpg" alt="" width="511" height="323" border="0" /></a></div>
+        <div class="slider-item">
+          <div class="text_item">
+            <h1 class="style2"> Document Index...</h1>
+            <p align="justify">We propose a method to build the document index and search trapdoor based on the concept hierarchy to support semantic search, which filters documents by checking the attribute value and sorts related documents based on the number of matched search terms.</p>
+            <a href="#"><img src="images/more_information.gif" alt="" width="141" height="33" border="0" /></a></div>
+          <a href="#"><img src="images/simple_img_3.jpg" alt="" width="511" height="323" border="0" /></a></div>
+      </div>
+      <!-- end #slideshow -->
+      <div class="controls-center">
+        <div id="slider_controls">
+          <h2>&nbsp;</h2>
+          <ul id="slider_nav">
+            <li><a href="#"></a></li>
+            <!-- Slide 1 -->
+            <li><a href="#"></a></li>
+            <!-- Slide 2 -->
+            <li><a href="#"></a></li>
+            <!-- Slide 3 -->
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="body">
+    <div class="search_bg"> <a href="#"></a>
+      <div class="search">
+        <form id="form1" name="form1" method="post" action="#">
+          <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+          </span>
+          <input name="b" type="image" src="images/search.gif" class="button" />
+        </form>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="body_resize">
+      <div class="body_resize_top">
+        <div class="body_resize_bottom">
+          <div class="blogcont" >
+            <h2>Introduction</h2>
+            <p><img src="images/Home.jpg" width="602" height="272" /></p>
+            <p align="justify" class="style5">With the increasing adoption of cloud computing, a growing number of users outsource their datasets to cloud. To preserve the privacy, the datasets are usually encrypted before outsourcing. However, the common practice of encryption makes the effective utilization of the data difficult. For example, it is difficult to search the given keywords in encrypted datasets. Many schemes are proposed to make encrypted data searchable based on keywords. However, keyword-based search schemes ignore the semantic representation information of users retrieval, and cannot completely meet with users search intention. Therefore, how to design a content-based search scheme and make semantic search more effective and context-aware is a difficult challenge. In this paper, we propose ECSED, a novel semantic search scheme based on the concept hierarchy and the semantic relationship between concepts in the encrypted datasets. ECSED uses two cloud servers. One is used to store the outsourced datasets and return the ranked results to data users. The other one is used to compute the similarity scores between the documents and the query and send the scores to the first server. To further improve the search efficiency, we utilize a tree-based index structure to organize all the document index vectors. We employ the multikeyword ranked search over encrypted cloud data as our basic frame to propose two secure schemes. The experiment<br />
+              results based on the real world datasets show that the scheme is more efficient than previous schemes. We also prove that our schemes are secure under the known ciphertext model and the known background model.</p>
+          </div>
+          <div class="blog">
+            <h2>Menu</h2>
+            <h5><span class="style4"><ul>
+			<li><a href="index.html">Home</a></li><br />
+			<li><a href="U_Login.jsp">User</a></li><br />
+			<li><a href="C_Login.jsp">Cloud</a></li><br />
+			<li><a href="O_Login.jsp">Owner</a></li><br />
+            <li><a href="T_Login.jsp">Trusted Authority </a></li>
+			</ul></span>            </h5>
+          </div>
+          <div class="clr"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="footer">
+    <div class="footer_resize"> <a href="#"></a>
+      <p class="right"><br />
+      </p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+<div align=center></div>
+</body>
+</html>
